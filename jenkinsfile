@@ -1,4 +1,4 @@
-@Library('my-shared-lib') _
+@Library('my-shared-library') _
 pipeline {
     agent any
      parameters{
@@ -14,7 +14,7 @@ stages {
             steps {
             gitCheckout(
                 branch: "main",
-                url: "https://github.com/rishi0490/project-.git"
+                url: "https://github.com/Abhinavbahugunaa/microservices.git"
           )   
           }
         }      
