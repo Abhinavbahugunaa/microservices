@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: javapp
+  template:
+    metadata:
+      labels:
+        app: javapp
+    spec:
+      containers:
+        - name: javapp-container
+          image: javapp:latest
+          ports:
+            - containerPort: 80
