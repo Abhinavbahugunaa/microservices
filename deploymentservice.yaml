@@ -17,3 +17,17 @@ spec:
           image: javapp:latest
           ports:
             - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: javapp-service
+spec:
+  selector:
+    app: javapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
