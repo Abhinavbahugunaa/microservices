@@ -20,7 +20,7 @@ global:
 # Create a systemd service file for Prometheus:
   sudo vi /etc/systemd/system/prometheus.service
 # Add the following content to the service file: 
- ```bash
+
 [Unit]
 Description=Prometheus Monitoring
 After=network.target
@@ -33,7 +33,7 @@ Restart=always
 
 [Install]
 WantedBy=default.target
- ```
+
 # Enable and Start the Prometheus Service
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
