@@ -48,7 +48,7 @@ make sure you allow port 9090 in security group.
 
 
 
-                    -----------------------------------Grafana Installations-----------------------------------
+----------------------------------------Grafana Installations-----------------------------------
 
 # Update Packages and Install Dependencies 
  sudo apt update
