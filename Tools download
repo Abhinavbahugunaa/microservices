@@ -1,1 +1,46 @@
-                   ### install prometheus on ubuntu ###
+                   ---------------------Prometheus Installations on ubuntu------------------------------------
+# Download the Prometheus binary using "wget"
+ wget https://github.com/prometheus/prometheus/releases/download/v2.30.0/prometheus-2.30.0.linux-amd64.tar.gz.
+# Extract the downloaded archive
+ tar -xzf prometheus-2.30.0.linux-amd64.tar.gz
+# Move the extracted files to a suitable location:
+ sudo mv prometheus-2.30.0.linux-amd64 /usr/local/prometheus
+# Create a configuration file named prometheus.yml:
+ sudo vi /usr/local/prometheus/prometheus.yml
+# Add the following basic configuration to the prometheus.yml file:
+ 
+global:
+  scrape_interval: 15s
+ scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+# Create a systemd service file for Prometheus:
+ sudo vi /etc/systemd/system/prometheus.service
+# Add the following content to the service file: 
+
+ [Unit]
+Description=Prometheus Monitoring
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/usr/local/prometheus/prometheus --config.file=/usr/local/prometheus/prometheus.yml
+WorkingDirectory=/usr/local/prometheus/
+Restart=always
+
+[Install]
+WantedBy=default.target
+
+# Enable and Start the Prometheus Service
+sudo systemctl enable prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+-->Open a web browser and navigate to http://your-instance-ip:9090. You should see the Prometheus web UI. /*
+ 
+
+
+
+
+
