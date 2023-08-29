@@ -115,7 +115,7 @@ kubectl get nodes
 
 
 
-----------------------------------Installations Helm--------------------------------------------
+---------------------------------- Helm Installations --------------------------------------------
 
 Use bash scripting 
 1) Create a file in terminal 
@@ -133,7 +133,7 @@ helm version
 3) sudo sh helm.sh  
 
 
---------------------------------------INSTALLATIONS DOCKER--------------------------------------------
+-------------------------------------- DOCKER Installations--------------------------------------------
 sudo apt update -y
 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
