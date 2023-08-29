@@ -179,7 +179,7 @@ sudo usermod -aG docker jenkins
 
 --->Open a web browser and navigate to at http://your-instance-ip:8080.
 
----------------------------------------SONARQUBEINSTALLATION------------------------------------------------
+---------------------------------------SONARQUBE INSTALLATION------------------------------------------------
 
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
