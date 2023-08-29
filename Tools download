@@ -113,6 +113,26 @@ kubeadm join 172.31.84.66:6443 --token n4tfb4.grmew1s1unug0get --discovery-token
 kubectl get nodes 
 
 
+
+
+----------------------------------Installations Helm--------------------------------------------
+
+Use bash scripting 
+1) Create a file in terminal 
+sudo vi helm.sh
+2) copy the below script and paste in 'helm.sh'
+
+#!/bin/bash
+echo "Install Helm Chart Using Script"
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+echo "checking version.."
+helm version 
+
+3) sudo sh helm.sh  
+
+
  
 
 
