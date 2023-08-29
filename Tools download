@@ -183,6 +183,7 @@ sudo usermod -aG docker jenkins
 
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
+--->Open a web browser and navigate to at http://your-instance-ip:9000.
 
 ----------------------------------------MAVEN INSTALLATION-----------------------------------------------------
 sudo apt update -y
