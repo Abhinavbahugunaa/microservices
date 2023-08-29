@@ -111,6 +111,8 @@ kubeadm reset pre-flight checks
 kubeadm join 172.31.84.66:6443 --token n4tfb4.grmew1s1unug0get --discovery-token-ca-cert-hash sha256:c3fda2eaf5960bed4320d8175dc6a73b1556795b1b7f5aadc07642ed85c51069 --v=5
 
 #To verify cluster connection  
+--->Open a web browser and navigate to at http://your-instance-ip:6443.
+
 ---------------------------------------on Master Node-----------------------------------------
 
 kubectl get nodes 
@@ -175,6 +177,7 @@ sudo apt-get install jenkins -y
 
 sudo usermod -aG docker jenkins
 
+--->Open a web browser and navigate to at http://your-instance-ip:8080.
 
 ---------------------------------------SONARQUBEINSTALLATION------------------------------------------------
 
