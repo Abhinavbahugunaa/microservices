@@ -37,7 +37,7 @@ WantedBy=default.target
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
 sudo systemctl status prometheus
--->Open a web browser and navigate to http://your-instance-ip:9090. You should see the Prometheus web UI. /*
+-->Open a web browser and navigate to http://your-instance-ip:9090. You should see the Prometheus web UI.
  
 
 
