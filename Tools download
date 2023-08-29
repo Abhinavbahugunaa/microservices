@@ -1,12 +1,13 @@
-                   ---------------------Prometheus Installations on ubuntu------------------------------------
+                   ---------------------Prometheus Installations------------------------------------
 # Download the Prometheus binary using "wget"
- wget https://github.com/prometheus/prometheus/releases/download/v2.30.0/prometheus-2.30.0.linux-amd64.tar.gz.
+  wget https://github.com/prometheus/prometheus/releases/download/v2.30.0/prometheus-2.30.0.linux-amd64.tar.gz.
 # Extract the downloaded archive
- tar -xzf prometheus-2.30.0.linux-amd64.tar.gz
+  tar -xzf prometheus-2.30.0.linux-amd64.tar.gz
 # Move the extracted files to a suitable location:
- sudo mv prometheus-2.30.0.linux-amd64 /usr/local/prometheus
+  sudo mv prometheus-2.30.0.linux-amd64 /usr/local/prometheus
 # Create a configuration file named prometheus.yml:
- sudo vi /usr/local/prometheus/prometheus.yml
+  sudo vi /usr/local/prometheus/prometheus.yml
+  sudo chown -R ubuntu:ubuntu /usr/local/prometheus
 # Add the following basic configuration to the prometheus.yml file:
  
 global:
@@ -17,10 +18,10 @@ global:
       - targets: ['localhost:9090']
 
 # Create a systemd service file for Prometheus:
- sudo vi /etc/systemd/system/prometheus.service
+  sudo vi /etc/systemd/system/prometheus.service
 # Add the following content to the service file: 
-
- [Unit]
+ ```bash
+[Unit]
 Description=Prometheus Monitoring
 After=network.target
 
@@ -32,12 +33,20 @@ Restart=always
 
 [Install]
 WantedBy=default.target
-
+ ```
 # Enable and Start the Prometheus Service
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
 sudo systemctl status prometheus
 -->Open a web browser and navigate to http://your-instance-ip:9090. You should see the Prometheus web UI.
+
+
+
+                    -----------------------------------
+
+
+
+
  
 
 
