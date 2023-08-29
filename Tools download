@@ -60,7 +60,7 @@ make sure you allow port 9090 in security group.
  sudo systemctl start grafana-server
  sudo systemctl enable grafana-server
 
-make sure you allow port 3000 in security grou 
+make sure you allow port 3000 in security group 
 --->Open a web browser and navigate to at http://your-instance-ip:3000.
 
 
