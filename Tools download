@@ -173,12 +173,12 @@ sudo apt-get install jenkins -y
 sudo usermod -aG docker jenkins
 
 
----------------------------------------INSTALL SONARQUBE------------------------------------------------
+---------------------------------------SONARQUBEINSTALLATION------------------------------------------------
 
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
 
-----------------------------------------INSTALL MAVEN-----------------------------------------------------
+----------------------------------------MAVEN INSTALLATION-----------------------------------------------------
 sudo apt update -y
 sudo apt install maven -y
 mvn -version
