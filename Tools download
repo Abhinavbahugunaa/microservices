@@ -178,6 +178,7 @@ sudo apt-get install jenkins -y
 sudo usermod -aG docker jenkins
 
 --->Open a web browser and navigate to at http://your-instance-ip:8080.
+--->plz check security group port 8080 Allow all trafic
 
 ---------------------------------------SONARQUBE INSTALLATION------------------------------------------------
 
